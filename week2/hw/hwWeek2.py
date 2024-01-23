@@ -1,7 +1,8 @@
 import csv
 
 total_records = 0
-
+print("Type\t\tBrand\t\tCPU\t\tRAM\t\t1st Disk\t # HDD\t\t2nd Disk\tOS\tYEAR")
+print("-------------------------------------------------------------------------------------------------------------------------------")
 with open("week2/hw/lab2b.csv") as csvfile:
 
     file = csv.reader(csvfile)
@@ -32,9 +33,21 @@ with open("week2/hw/lab2b.csv") as csvfile:
         ram = rec[3]
         hdd_1 = rec[4]
         num_hdd = rec[5]
+        os = rec[6]
+        year = rec[7]
+    
+        if num_hdd == "1":
+            hdd_2 = ""
+
+        elif num_hdd == "2":
+            hdd_2 = rec[6]
+            os = rec[7]
+            year = rec[8]
+        
+        
 
 
         #final printed message for each machine
-        print(rec)
-        print(f"{comp_type} {manu} {processor} {ram} {hdd_1} { num_hdd} {hdd_2} {os} {year}")
+        
+        print(f"{comp_type:<15} {manu:<15} {processor:<15} {ram:<15} {hdd_1:<16} {num_hdd:<14} {hdd_2:<15} {os:<7} {year}")
 
