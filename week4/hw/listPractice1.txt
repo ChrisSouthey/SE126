@@ -8,7 +8,7 @@ Reda,Spatz,67,68,67
 Garret,Backer,90,70,74
 Dominque,Wille,100,98,100
 Tamekia,Twist,88,72,81
-Edris,Labella93,81,95
+Edris,Labella,93,81,95
 Gracia,Villalobos,78,77,80
 Germaine,Mcquinn,60,58,83
 Francisca,Paul,73,77,71
