@@ -64,6 +64,7 @@ let = " "
 
 for i in range(0, len(average)):
 
+    #This part gave me so many problems
     avg = average[i]
 
     if avg >= 90:
