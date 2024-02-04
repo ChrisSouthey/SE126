@@ -37,13 +37,14 @@ for i in range(0, len(fname)):
     print(f"{fname[i]:12} \t {lname[i]:12} \t {t1[i]} \t {t2[i]} \t {t3[i]}")
 print("--------------------------------------------------------")
 
+#-----Getting average score------------------------
 avg = 0
 total_count = 0
 average = []
 
 for i in range(0, len(t1)):
 
-    avg = (t1[i] + t2[i] + t3[i]) / 3
+    avg = (t1[i] + t2[i] + t3[i]) / 3.0
 
     average.append(avg)
 
@@ -57,12 +58,14 @@ for i in range(0, len(fname)):
 
 print("---------------------------")
 
+#-----Getting letter grade---------------------------
 let_avg = []
 let = " "
 
 for i in range(0, len(average)):
 
-    
+    avg = average[i]
+
     if avg >= 90:
         let = "A"
 
@@ -78,17 +81,41 @@ for i in range(0, len(average)):
     else:
         let = "F"
 
-
+    
     let_avg.append(let)
  
  
-print("\n---------------------------")
-print(f"{'fname':12} \t {'average'} \t {'letter'}")
-print("---------------------------")
+print("\n-------------------------------------------")
+print(f"{'fname':12} \t     {'average':8} \t {'letter'}")
+print("-------------------------------------------")
+
 for i in range(0, len(let_avg)):
+    print(f"{fname[i]:12} \t {average[i]:8.1f} \t {let_avg[i]}")
 
-    print(f"{fname[i]:12} \t {average[i]:.1f} \t {let}")
+print("-------------------------------------------")
+
+#-----2D list------------------------
+
+all_students = []
+
+for i in range(0, len(fname)):
+
+    all_students.append([fname[i], lname[i], t1[i], t2[i], t3[i], "%.1f"%average[i], let_avg[i]])
+
+#for i in range(0, len(all_students)):
+    #print(f"{all_students[i]}")
 
 
+print("\n----------------------------------------------------------------------------------------------------------")
+print(f"{'First':8}\t {'LAST':8} \t      {'TEST1':10}       {'TEST2':8}       {'TEST3':8}   {'AVERAGE':10} \t {'Letter'}")
+print("----------------------------------------------------------------------------------------------------------")
 
+for i in range(0, len(all_students)):
 
+    for x in range(0, len(all_students[i])):
+
+        print(f"{all_students[i][x]:8}", end="\t ")
+
+    print()
+
+print("----------------------------------------------------------------------------------------------------------\n")

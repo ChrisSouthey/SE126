@@ -82,8 +82,6 @@ for i in range(0, len(fname)):
     all_students.append([fname[i], lname[i], test1[i], test2[i], test3[i], average[i]])
 
 #display the 2D list to the console - for now, just get the lists to display ie ['Floyd', 'Eastham', '100', '85', '93']
-for i in range(0, len(all_students)):
-    print(f"{all_students[i]}")
 
 print(f"----2D lists - INDIV. VALUES!--------------------------------")
 print(f"{'First':12} \t {'LAST':12} \t {'TEST1'} \t {'TEST2'} \t {'TEST3'} \t {'AVERAGE'}")
