@@ -1,0 +1,34 @@
+Slash,1959 Les Paul Standard,3199
+Eddie Van Halen,Frankenstrat,1999
+Angus Young,1971 Gibson SG Standard,3195
+Jimmy Hendrix,1964 Fender Stratocaster,4200
+Kurt Cobain,1969 Fender Mustang,1200
+Dave Grohl,Gibson DG-335,3999
+Brian May,Red Special,5999
+Eric Clapton,Fender Stratocaster,2099
+Prince,Fender Telecaster,1799
+Kirk Hammett,ESP KH-2,4279
+James Hetfield,Gibson Explorer,2499
+Tom Morello,Mongrel Stratocaster,1699
+Synyster Gates,Schecter Synyster Gates Custom,1399
+Carlos Santana,PRS Custom 24,4890
+Pete Townshend,Fender Stratocaster,6500
+Stevie Ray Vaughan,Fender Stratocaster,10900
+Chuck Berry,Gibson ES-350T,10999
+George Harrison,Fender Stratocaster,3936
+Jack White,1964 Valco Airline,2150
+Brian Bell,1996 Fender Stratocaster,799
+Dimebag Darrell,Dean ML,1499
+Bruce Springsteen,Fender Esquire,4899
+Zakk Wylde,
+Steve Vai,
+Tommy Thayer,
+Ace Frehley,
+Buckethead, 
+Joe Satriani,
+Randy Rhoads,
+Dave Mustaine,
+Jimmy Page,
+
+
+
