@@ -1,34 +1,53 @@
-Slash,1959 Les Paul Standard,3199
-Eddie Van Halen,Frankenstrat,1999
-Angus Young,1971 Gibson SG Standard,3195
-Jimmy Hendrix,1964 Fender Stratocaster,4200
-Kurt Cobain,1969 Fender Mustang,1200
-Dave Grohl,Gibson DG-335,3999
-Brian May,Red Special,5999
+Slash,Guns N Roses,1959 Les Paul Standard,3199
+Eddie Van Halen,Van Halen,Frankenstrat,1999
+Angus Young,ACDC,1971 Gibson SG Standard,3195
+Jimi Hendrix,1964 Fender Stratocaster,4200
+Kurt Cobain,Nirvana,1969 Fender Mustang,1200
+Dave Grohl,Foo Fighters,Gibson DG-335,3999
+Brian May,Queen,Red Special,5999
 Eric Clapton,Fender Stratocaster,2099
 Prince,Fender Telecaster,1799
-Kirk Hammett,ESP KH-2,4279
-James Hetfield,Gibson Explorer,2499
-Tom Morello,Mongrel Stratocaster,1699
-Synyster Gates,Schecter Synyster Gates Custom,1399
-Carlos Santana,PRS Custom 24,4890
-Pete Townshend,Fender Stratocaster,6500
+Kirk Hammett,Metallica,ESP KH-2,4279
+James Hetfield,Metallica,Gibson Explorer,2499
+Tom Morello,Rage Against the Machine,Mongrel Stratocaster,1699
+Synyster Gates,Avenged Sevenfold,Schecter Synyster Gates Custom,1399
+Carlos Santana,Santana,PRS Custom 24,4890
+Pete Townshend,The Who,Fender Stratocaster,6500
 Stevie Ray Vaughan,Fender Stratocaster,10900
 Chuck Berry,Gibson ES-350T,10999
-George Harrison,Fender Stratocaster,3936
-Jack White,1964 Valco Airline,2150
-Brian Bell,1996 Fender Stratocaster,799
-Dimebag Darrell,Dean ML,1499
-Bruce Springsteen,Fender Esquire,4899
-Zakk Wylde,
-Steve Vai,
-Tommy Thayer,
-Ace Frehley,
-Buckethead, 
-Joe Satriani,
-Randy Rhoads,
-Dave Mustaine,
-Jimmy Page,
-
-
-
+George Harrison,The Beatles,Fender Stratocaster,3936
+Jack White,The White Stripes,1964 Valco Airline,2150
+Brian Bell,Weezer,1996 Fender Stratocaster,799
+Dimebag Darrell,Pantera,Dean ML,1499
+Bruce Springsteen,E Street Band,Fender Esquire,4899
+Zakk Wylde,Gibson Les Paul,1119
+Steve Vai,Whitesnake,Ibanez JEM,1799
+Tommy Thayer,KISS,Epiphone Les Paul,714
+Ace Frehley,KISS,1976 Les Paul,3299
+Buckethead,Gibson Les Paul,6550
+Joe Satriani,Ibanez JS100,1699
+Randy Rhoads,Quiet Riot,1974 Gibson Les Paul,799
+Dave Mustaine,Megadeth,Gibson Flying V,2799
+Jimmy Page,Led Zepplin,Gibson Leb Paul,2499
+Jake E. Lee,Fender Stratocaster,1299
+Andy Summers,The Police,1963 Fender Telecaster,2199
+Phil Collen,Def Leopard,1978 Fender Stratocaster,3499
+John Sykes,Whitesnake,1978 Gibson Les Paul Custom,2199
+Adrian Vanderberg,Whitesnake,Gibson Les Paul Heritage,2599
+Dave Murray,Iron Maiden,1957 Fender Stratocaster,1699
+Chrissie Hynde,The Pretenders,Fender Telecaster,799
+George Lynch,Dokken,ESP LTD Tiger Stripe,1699
+CC DeVille,Poison,B.C. Rich Gunslinger,4199
+Mick Mars,Motley Crue,1962 Fender Stratocaster,4950
+Neal Schon,Journey,Fender Custom Shop Stratocaster,5950
+Carlos Cavazo,Quiet Riot,Gibson Flying V,2499
+Brad Whitford,Aerosmith,1965 Fender Stratocaster,1699
+Herman Li,DragonForce,Ibanez EGEN8,775
+Izzy Stradlin,Guns N Roses,Gibson ES-175,3495
+Paul Stanley,KISS,Ibanez PS120,999
+Marty Friedman,Megadeth,Jackson MF-1,1349
+Scott Ian,Anthrax,Jackson Flying V,799
+Kerry King,Slayer,Dean FLying V,1499
+Vernon Reid,Living Colour,Gibson ES-330,3499
+Mike McCready,Pearl Jam,Fender Stratocaster,1899
+Stone Gossard,Pearl Jam,Gibson Les Paul Custom,15000
