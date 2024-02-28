@@ -1,4 +1,6 @@
 import csv
+from os import system, name
+from time import sleep
 
 #Creating empty lists
 rowNum = []
@@ -6,6 +8,7 @@ seatA = []
 seatB = []
 seatC = []
 seatD = []
+selectionList = []
 
 
 with open("week8/hw/airconditioning.txt") as csvfile:
@@ -20,11 +23,20 @@ with open("week8/hw/airconditioning.txt") as csvfile:
         seatD.append(rec[4])
 
 
+#---FUNCTIONS------------------------------------
+#Clear function
+def clear():  
 
-#Funtion to select seat    
+     # for windows  
+     if name == 'nt':
+          _ = system('cls')  
+     # for mac and linux(here, os.name is 'posix')  
+     else:  
+          _ = system('clear') 
+
+#Funtion to show seating chart    
 def chart():
 
-    answer = input("\nWould you like to reserve a seat? [Y or N]: ").lower()
 
     if answer == "y":
         print()
@@ -34,7 +46,7 @@ def chart():
             print(f"| Row {rowNum[i]}     {seatA[i]}  {seatB[i]}       {seatC[i]}  {seatD[i]}  |")
         print("------------------------------")
 
-
+#Getting the row #
 def get_row():
 
     row_r = -1
@@ -48,7 +60,7 @@ def get_row():
             print("Must be a number between 1 and 7!!!")
     return row_r
     
-
+#Getting the Seat letter
 def get_seat():
 
     acceptable_seats = ["A", "B", "C", "D"]
@@ -63,59 +75,94 @@ def get_seat():
     return seat_r
 
 answer = "y"
+clear()
+answer = input("\nWould you like to reserve a seat? [Y or N]: ").lower()
 
 while answer == "y":
+    
     chart()
 
     row_req = get_row()
     seat_req = get_seat()
 
+    seatSel = str(row_req) + seat_req
 
-    print(f"\nYou have chosen seat {row_req}{seat_req}")
+    
+    
 
+    print(f"\nYou have chosen seat {seatSel}")
+
+    #Replacing selected seat with an X
     if seat_req == "A":
 
         if seatA[row_req - 1] != "X":
-            print("This seat is available!")
+            print("\nThis seat is available!")
             seatA[row_req - 1] = "X"
 
         else:
             print(f"\n\nSorry, the seat {row_req}{seat_req} is taken.")
             
-    answer = input("Would you liek to select another seat? [y/n]: ")
-
-    if seat_req == "B":
-
-        if seatA[row_req - 1] != "X":
-            print("This seat is available!")
-            seatA[row_req - 1] = "X"
-
-        else:
-            print(f"\n\nSorry, the seat {row_req}{seat_req} is taken.")
-            
-    answer = input("Would you liek to select another seat? [y/n]: ")
-
-    if seat_req == "C":
-
-        if seatA[row_req - 1] != "X":
-            print("This seat is available!")
-            seatA[row_req - 1] = "X"
-
-        else:
-            print(f"\n\nSorry, the seat {row_req}{seat_req} is taken.")
-            
-    answer = input("Would you liek to select another seat? [y/n]: ")
-
-    if seat_req == "D":
-
-        if seatA[row_req - 1] != "X":
-            print("This seat is available!")
-            seatA[row_req - 1] = "X"
-
-        else:
-            print(f"\n\nSorry, the seat {row_req}{seat_req} is taken.")
-            
-    answer = input("Would you liek to select another seat? [y/n]: ")
     
 
+    elif seat_req == "B":
+
+        if seatB[row_req - 1] != "X":
+            print("\nThis seat is available!")
+            seatB[row_req - 1] = "X"
+
+        else:
+            print(f"\n\nSorry, the seat {row_req}{seat_req} is taken.")
+            
+    
+
+    elif seat_req == "C":
+
+        if seatC[row_req - 1] != "X":
+            print("\nThis seat is available!")
+            seatC[row_req - 1] = "X"
+
+        else:
+            print(f"\n\nSorry, the seat {row_req}{seat_req} is taken.")
+            
+    
+
+    elif seat_req == "D":
+
+        if seatD[row_req - 1] != "X":
+            print("\nThis seat is available!")
+            seatD[row_req - 1] = "X"
+
+        else:
+            print(f"\n\nSorry, the seat {row_req}{seat_req} is taken.")
+
+            
+    answer = input("\nEnter Y to confirm selection or C to cancel: ").lower()
+
+    if answer == "y":
+        selectionList.append(seatSel)
+        clear()
+        sleep(0.1)
+        chart()
+    
+    elif answer == "c":
+        clear()
+        print("\nSeat selection canceled")
+
+
+    print(f"\nSeats chosen: {selectionList}")
+    answer = input("\nWould you like to select another seat? [y/n]: ").lower()
+    
+    if answer == "y":
+        clear()
+        sleep(0.1)
+
+    else:
+        clear()
+        sleep(0.1)
+
+
+chart()
+print(f"\nYou have chosen seats {selectionList}")
+
+print("\nThank you for flying with us! Please enjoy your Travels.")
 
