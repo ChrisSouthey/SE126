@@ -53,7 +53,7 @@ def id_search(id_search):
     return found_index
 
 #Search by Last Name
-def id_search(id_search):
+def num_search(id_search):
 
     found_index = ""
 
@@ -64,3 +64,117 @@ def id_search(id_search):
             found_index = i
 
     return found_index
+
+#Search by Last Name
+def name_search(lname_search):
+
+    found_index = ""
+
+    for i in range(0, len(lname)):
+
+        if lname[i] == lname_search:
+
+            found_index = i
+
+    return found_index
+
+#Search by Class
+def class_search(classSearch):
+
+    found_index = ""
+
+    for i in range(0, len(class1)):
+
+        if class1[i] == classSearch:
+
+            found_index = i
+
+        elif class2[i] == classSearch:
+
+            found_index = i
+
+        elif class3[i] == classSearch:
+
+            found_index = i
+
+    return found_index
+
+
+
+#-----Main loop-----------------------------------
+with open("week7/hw/lab5_students.txt") as csvfile:
+
+    file = csv.reader(csvfile)
+
+    for rec in file:
+
+        id.append(rec[0])
+        lname.append(rec[1])
+        fname.append(rec[2])
+        class1.append(rec[3])
+        class2.append(rec[4])
+        class3.append(rec[5])
+
+        #print(rec)
+
+menu_choice = menu()
+
+while menu_choice != "5":
+
+    if menu_choice == "1":
+        print(f"{'ID'} \t {'LAST':12}  {'FIRST':8}  {'CLASS1'}  {'CLASS2'}  {'CLASS3'}")
+        print("---------------------------------------------------------")
+        for i in range(0, len(lname)):
+            print(f"{id[i]} \t {lname[i]:12}  {fname[i]:8}  {class1[i]} \t {class2[i]} \t {class3[i]}")
+        print("---------------------------------------------------------")
+
+        menu_choice = menu()
+
+    if menu_choice == "2":
+        search = input("\nEnter the ID# for the student you are searching for: ")
+
+        found = id_search(search)
+
+        if found != "":
+            print(f"{'ID'} \t {'LAST':12}  {'FIRST':8}  {'CLASS1'}  {'CLASS2'}  {'CLASS3'}")
+            print("---------------------------------------------------------")
+            print(f"{id[found]} \t {lname[found]:12}  {fname[found]:8}  {class1[found]} \t {class2[found]} \t {class3[found]}")
+            print("---------------------------------------------------------")
+            
+        else:
+            print(f"**ERROR** Could not find a student with the ID: {search}")
+
+        menu_choice = menu()
+
+    if menu_choice == "3":
+        search = input("\nEnter the LAST NAME for the student you are searching for: ")
+
+        found = name_search(search)
+
+        if found != "":
+            print(f"{'ID'} \t {'LAST':12}  {'FIRST':8}  {'CLASS1'}  {'CLASS2'}  {'CLASS3'}")
+            print("---------------------------------------------------------")
+            print(f"{id[found]} \t {lname[found]:12}  {fname[found]:8}  {class1[found]} \t {class2[found]} \t {class3[found]}")
+            print("---------------------------------------------------------")
+
+        else:
+            print(f"**ERROR** Could not find a student with the Last Name: {search}")
+
+        menu_choice = menu()
+
+    if menu_choice == "4":
+        search = input("\nEnter the CLASS you wish to see the roster for: ")
+
+        found = class_search(search)
+
+        if found != "":
+            print(f"{'ID'} \t {'LAST':12}  {'FIRST':8}  {'CLASS1'}  {'CLASS2'}  {'CLASS3'}")
+            print("---------------------------------------------------------")
+            for i in range(0, len(class1)):
+                print(f"{id[found]} \t {lname[found]:12}  {fname[found]:8}  {class1[found]} \t {class2[found]} \t {class3[found]}")
+            print("---------------------------------------------------------")
+
+        else:
+            print(f"**ERROR** Could not find Class by the name of: {search}")
+
+    menu_choice = menu()
