@@ -16,7 +16,7 @@ fname = []
 class1 = []
 class2 = []
 class3 = []
-
+found_class = []
 
 #-----Functions----------------
 def menu():
@@ -85,18 +85,10 @@ def class_search(classSearch):
 
     for i in range(0, len(class1)):
 
-        if class1[i] == classSearch:
+        if class1[i] == classSearch or class2[i] == classSearch or class3[i] == classSearch:
 
             found_index = i
-
-        elif class2[i] == classSearch:
-
-            found_index = i
-
-        elif class3[i] == classSearch:
-
-            found_index = i
-
+            found_class.append(found_index)
     return found_index
 
 
@@ -163,18 +155,19 @@ while menu_choice != "5":
         menu_choice = menu()
 
     if menu_choice == "4":
-        search = input("\nEnter the CLASS you wish to see the roster for: ")
+        search = input("\nEnter the CLASS you wish to see the roster for: ").upper()
 
         found = class_search(search)
-
+        found_class.append(found)
         if found != "":
-            print(f"{'ID'} \t {'LAST':12}  {'FIRST':8}  {'CLASS1'}  {'CLASS2'}  {'CLASS3'}")
-            print("---------------------------------------------------------")
-            for i in range(0, len(class1)):
-                print(f"{id[found]} \t {lname[found]:12}  {fname[found]:8}  {class1[found]} \t {class2[found]} \t {class3[found]}")
-            print("---------------------------------------------------------")
+            print(f"{'ID'} \t {'LAST':12}  {'FIRST':8}")
+            print("---------------------------------------------")
+            for i in range(0, len(found_class)):
+                print(f"{id[found]} \t {lname[found]:12}  {fname[found]:8}")
+            print("---------------------------------------------")
 
         else:
             print(f"**ERROR** Could not find Class by the name of: {search}")
 
     menu_choice = menu()
+   
