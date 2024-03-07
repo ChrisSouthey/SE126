@@ -88,7 +88,7 @@ def class_search(classSearch):
         if class1[i] == classSearch or class2[i] == classSearch or class3[i] == classSearch:
 
             found_index = i
-            found_class.append(found_index)
+            
     return found_index
 
 
@@ -159,6 +159,7 @@ while menu_choice != "5":
 
         found = class_search(search)
         found_class.append(found)
+        print(found_class)
         if found != "":
             print(f"{'ID'} \t {'LAST':12}  {'FIRST':8}")
             print("---------------------------------------------")
