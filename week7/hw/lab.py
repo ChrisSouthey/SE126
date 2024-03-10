@@ -85,13 +85,21 @@ def class_search(classSearch):
 
     for i in range(0, len(class1)):
 
-        if class1[i] == classSearch or class2[i] == classSearch or class3[i] == classSearch:
+        if class1[i] == classSearch:
 
-            found_index = i
-            
+            found_class.append(i)
+           
+
+        if class2[i] == classSearch:
+
+            found_class.append(i)
+ 
+
+        if class3[i] == classSearch:
+
+            found_class.append(i)
+
     return found_index
-
-
 
 #-----Main loop-----------------------------------
 with open("week7/hw/lab5_students.txt") as csvfile:
@@ -158,8 +166,8 @@ while menu_choice != "5":
         search = input("\nEnter the CLASS you wish to see the roster for: ").upper()
 
         found = class_search(search)
-        found_class.append(found)
-        print(found_class)
+        
+        
         if found != "":
             print(f"{'ID'} \t {'LAST':12}  {'FIRST':8}")
             print("---------------------------------------------")
