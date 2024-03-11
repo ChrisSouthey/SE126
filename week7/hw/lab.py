@@ -80,26 +80,13 @@ def name_search(lname_search):
 
 #Search by Class
 def class_search(classSearch):
-
-    found_index = ""
+    found_indices = []
 
     for i in range(0, len(class1)):
+        if class1[i] == classSearch or class2[i] == classSearch or class3[i] == classSearch:
+            found_indices.append(i)
 
-        if class1[i] == classSearch:
-
-            found_class.append(i)
-           
-
-        if class2[i] == classSearch:
-
-            found_class.append(i)
- 
-
-        if class3[i] == classSearch:
-
-            found_class.append(i)
-
-    return found_index
+    return found_indices
 
 #-----Main loop-----------------------------------
 with open("week7/hw/lab5_students.txt") as csvfile:
@@ -171,12 +158,11 @@ while menu_choice != "5":
         if found != "":
             print(f"{'ID'} \t {'LAST':12}  {'FIRST':8}")
             print("---------------------------------------------")
-            for i in range(0, len(found_class)):
-                print(f"{id[found]} \t {lname[found]:12}  {fname[found]:8}")
+            for i in found:
+                print(f"{id[i]} \t {lname[i]:12}  {fname[i]:8}")
             print("---------------------------------------------")
-
         else:
-            print(f"**ERROR** Could not find Class by the name of: {search}")
+            print(f"ERROR Could not find Class by the name of: {search}")
 
     menu_choice = menu()
    
