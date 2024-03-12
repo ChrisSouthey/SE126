@@ -1,12 +1,13 @@
 import csv
 import os
-from os import system, name
 from time import sleep
 
 #Chris Southey
 #Midterm project
 #The user will see a printed list of famous guitarists, the band they are in, Their signature guitar, and the average price of that guitar, and be able to search for a specific guitarist
 
+
+#note for KT: clear() issue, so using os.system('cls')
 #-----Lists-----------------------------------------
 name = []
 age = []
@@ -19,17 +20,6 @@ price = []
 
 
 #-----Functions-------------------------------------
-def clear(): #Clear func
-
-     # for windows  
-     if name == 'nt':
-          _ = os.system('cls')  
-     # for mac and linux(here, os.name is 'posix')  
-     else:  
-          _ = system('clear') 
-
-
-
 def menu(): #Menu func
     print("\n\t\tWelcome")
     print("\t1. Show all Guitarists")
@@ -60,9 +50,9 @@ def deadOrAlive(life_search): #Sort by Dead or Alive
         aliveList = []
         
         for i in range(0, len(dOrA)):
-
-            if dOrA[i] == "alive":
-                
+            print(f"checking to see if {dOrA[i]}")
+            if dOrA[i].lower() == life_search:
+                print(f"alive!")
                 aliveList.append(i)
                 
         return aliveList
@@ -72,7 +62,7 @@ def deadOrAlive(life_search): #Sort by Dead or Alive
         
         for i in range(0, len(dOrA)):
 
-            if dOrA[i] == "dead":
+            if dOrA[i].lower() == life_search:
 
                 deadList.append(i)
         
@@ -114,11 +104,11 @@ def b_search(band_search): #Search by band func
 
         return found_index
 
-def swap(price, k): #Swap func
+def swap(listName, k): #Swap func
     #posi --> current position (index) of where swap needs to occur
-    temp = price[k]
-    price[k] = price[k + 1]
-    price[k + 1] = temp
+    temp = listName[k]
+    listName[k] = listName[k + 1]
+    listName[k + 1] = temp
 
 #-----loop-----------------------------------------
 
@@ -147,9 +137,9 @@ with open("final/finalList.txt") as csvfile: #Append loop
 
         #print(rec)
 
+os.system('cls') #clear screen function call
+sleep(0.1)
 menu_choice = menu()
-
-
 
 while menu_choice != "9":
     
@@ -161,21 +151,20 @@ while menu_choice != "9":
             print(f"{name[i]:15} \t {age[i]} \t {dOrA[i]:8} \t {band[i]:23} \t {guitar[i]:30} \t ${price[i]:9.2f}")
 
         print("-------------------------------------------------------------------------------------------------------------------------------------\n")
+        input("\n\t \t \t \tPress ENTER to continue...")
+        os.system('cls')
+        sleep(0.1)
         menu_choice = menu()
 
     if menu_choice == "2": #Sort by price
 
-        inOrDe = input("\n\tWould you like to filter in increasing or decreasing order?: ").lower()
-
+        inOrDe = input("\n\tWould you like to filter PRICE in increasing or decreasing order?: ").lower()
+        os.system('cls')
+        sleep(0.1)
         if inOrDe == "increasing":
             for i in range(0, len(price) - 1):
                 for k in range(0, len(price) - 1):
                     if price[k] > price[k + 1]:
-
-                        #swap values
-                        ageSwap = price[k]
-                        price[k] = price[k + 1]
-                        price[k + 1] = ageSwap
 
                         swap(name, k)
                         swap(age, k)
@@ -183,24 +172,23 @@ while menu_choice != "9":
                         swap(band, k)
                         swap(guitar, k)
                         swap(price, k)
-
+            print()
+            print()
             print(f"{'NAME':18} \t {'AGE'} \t {'D-Or-A':8} \t {'BAND':23} \t {'GUITAR':30} \t {'PRICE':9}")
             print("-------------------------------------------------------------------------------------------------------------------------------------")
             for i in range(0, len(name)):
                 print(f"{name[i]:15} \t {age[i]} \t {dOrA[i]:8} \t {band[i]:23} \t {guitar[i]:30} \t ${price[i]:9.2f}")
 
             print("-------------------------------------------------------------------------------------------------------------------------------------\n")
+            input("\n\t \t \t \tPress ENTER to continue...")
+            os.system('cls')
+            sleep(0.1)
             menu_choice = menu()            
 
         elif inOrDe == "decreasing":
                         for i in range(0, len(age) - 1):
                             for k in range(0, len(age) - 1):
                                 if price[k] < price[k + 1]:
-
-                                    #swap values
-                                    ageSwap = price[k]
-                                    price[k] = price[k + 1]
-                                    price[k + 1] = ageSwap
 
                                     swap(name, k)
                                     swap(age, k)
@@ -209,95 +197,163 @@ while menu_choice != "9":
                                     swap(guitar, k)
                                     swap(price, k)
 
-        print(f"{'NAME':18} \t {'AGE'} \t {'D-Or-A':8} \t {'BAND':23} \t {'GUITAR':30} \t {'PRICE':9}")
-        print("-------------------------------------------------------------------------------------------------------------------------------------")
-        for i in range(0, len(name)):
-            print(f"{name[i]:15} \t {age[i]} \t {dOrA[i]:8} \t {band[i]:23} \t {guitar[i]:30} \t ${price[i]:9.2f}")
+                        print()
+                        print()
+                        print(f"{'NAME':18} \t {'AGE'} \t {'D-Or-A':8} \t {'BAND':23} \t {'GUITAR':30} \t {'PRICE':9}")
+                        print("-------------------------------------------------------------------------------------------------------------------------------------")
+                        for i in range(0, len(name)):
+                            print(f"{name[i]:15} \t {age[i]} \t {dOrA[i]:8} \t {band[i]:23} \t {guitar[i]:30} \t ${price[i]:9.2f}")
 
-        print("-------------------------------------------------------------------------------------------------------------------------------------\n")
-        menu_choice = menu()
-            
+                        print("-------------------------------------------------------------------------------------------------------------------------------------\n")
+                        input("\n\t \t \t \tPress ENTER to continue...")
+                        os.system('cls')
+                        sleep(0.1)
+                        menu_choice = menu()
+        
+        else:
+            print("\n\t\tChoice must be Increasing or Decreasing!!")
+            input("\n\t\tPress ENTER to continue...")
+            os.system('cls')
+            sleep(0.1)
+
     if menu_choice == "3": #Sort by age
-        for i in range(0, len(age) - 1):
-                for k in range(0, len(age) - 1):
-                    if age[k] > age[k + 1]:
+        inOrDe = input("\n\tWould you like to filter AGE in increasing or decreasing order?: ").lower()
+        os.system('cls')
+        sleep(0.1)
+        if inOrDe == "increasing":
+            for i in range(0, len(age) - 1):
+                    for k in range(0, len(age) - 1):
+                        if age[k] > age[k + 1]:
 
-                        #swap values
-                        ageSwap = age[k]
-                        age[k] = age[k + 1]
-                        age[k + 1] = ageSwap
+                            swap(name, k)
+                            swap(age, k)
+                            swap(dOrA, k)
+                            swap(band, k)
+                            swap(guitar, k)
+                            swap(price, k)
+            print()
+            print()
+            print(f"{'NAME':18} \t {'AGE'} \t {'D-Or-A':8} \t {'BAND':23} \t {'GUITAR':30} \t {'PRICE'}")
+            print("-------------------------------------------------------------------------------------------------------------------------------------")
+            for i in range(0, len(age)):
+                print(f"{name[i]:15} \t {age[i]} \t {dOrA[i]:8} \t {band[i]:23} \t {guitar[i]:30} \t $ {price[i]}")
 
-                        swap(name, k)
-                        swap(age, k)
-                        swap(dOrA, k)
-                        swap(band, k)
-                        swap(guitar, k)
-                        swap(price, k)
+            print("-------------------------------------------------------------------------------------------------------------------------------------\n")
+            input("\n\t \t \t \tPress ENTER to continue...")
+            os.system('cls')
+            sleep(0.1)
+            menu_choice = menu()      
 
-        print(f"{'NAME':18} \t {'AGE'} \t {'D-Or-A':8} \t {'BAND':23} \t {'GUITAR':30} \t {'PRICE'}")
-        print("-------------------------------------------------------------------------------------------------------------------------------------")
-        for i in range(0, len(age)):
-            print(f"{name[i]:15} \t {age[i]} \t {dOrA[i]:8} \t {band[i]:23} \t {guitar[i]:30} \t $ {price[i]}")
+        if inOrDe == "decreasing":
+            for i in range(0, len(age) - 1):
+                    for k in range(0, len(age) - 1):
+                        if age[k] < age[k + 1]:
 
-        print("-------------------------------------------------------------------------------------------------------------------------------------\n")
-        menu_choice = menu()      
+                            swap(name, k)
+                            swap(age, k)
+                            swap(dOrA, k)
+                            swap(band, k)
+                            swap(guitar, k)
+                            swap(price, k)
+
+            print()
+            print()
+            print(f"{'NAME':18} \t {'AGE'} \t {'D-Or-A':8} \t {'BAND':23} \t {'GUITAR':30} \t {'PRICE'}")
+            print("-------------------------------------------------------------------------------------------------------------------------------------")
+            for i in range(0, len(age)):
+                print(f"{name[i]:15} \t {age[i]} \t {dOrA[i]:8} \t {band[i]:23} \t {guitar[i]:30} \t $ {price[i]}")
+
+            print("-------------------------------------------------------------------------------------------------------------------------------------\n")
+            input("\n\t \t \t \tPress ENTER to continue...")
+            os.system('cls')
+            sleep(0.1)
+            menu_choice = menu()    
+
+        else:
+            print("\n\t\tChoice must be Increasing or Decreasing!!")
+            input("\n\t\tPress ENTER to continue...")
+            os.system('cls')
+            sleep(0.1)  
 
     if menu_choice == "4": #Sort by Dead or Alive
 
         search = input("\nWould you like to sort by Dead or Alive?: ").lower()
-
+        os.system('cls')
+        sleep(0.1)
         found = deadOrAlive(search)
         
         if found != "":
-            
+            print()
+            print()
             print(f"{'NAME':18} \t {'AGE'} \t {'D-Or-A':8} \t {'BAND':23} \t {'GUITAR':30} \t {'PRICE':9}")
             print("-------------------------------------------------------------------------------------------------------------------------------------")
             for i in found:
                 print(f"{name[i]:15} \t {age[i]} \t {dOrA[i]:8} \t {band[i]:23} \t {guitar[i]:30} \t ${price[i]:9.2f}")
             print("-------------------------------------------------------------------------------------------------------------------------------------\n")
-
+        input("\n\t \t \t \tPress ENTER to continue...")
+        os.system('cls')
+        sleep(0.1)
         menu_choice = menu()            
 
     if menu_choice == "5": #Showing Guitarist, Age, and Band
+        print()
+        print()
         print(f"{'NAME':19}  {'AGE'} \t {'D-Or-A':8} \t {'BAND':24}")
         print("---------------------------------------------------------------")
         for i in range(0, len(name)):
             print(f"{name[i]:20} {age[i]} \t {dOrA[i]:8} \t {band[i]:25}")
 
         print("---------------------------------------------------------------\n")
+        input("\n\t \t \t \tPress ENTER to continue...")
+        os.system('cls')
+        sleep(0.1)
         menu_choice = menu()
 
     if menu_choice == "6": #Showing Guitar + Price
+        print()
+        print()
         print(f"{'GUITAR':35} \t {'PRICE':9}")
         print("------------------------------------------------------")
         for i in range(0, len(name)):
             print(f"{guitar[i]:35} \t ${price[i]:9.2f}")
 
         print("------------------------------------------------------\n")
+        input("\n\t \t \t \tPress ENTER to continue...")
+        os.system('cls')
+        sleep(0.1)
         menu_choice = menu()
         
     if menu_choice == "7": #Search by Name
         search = input("\nEnter the NAME of the guitarist you are searching for: ")
-
+        os.system('cls')
+        sleep(0.1)
         found = seq_search(search)
 
         if found != "":
+            print()
+            print()
             print(f"{'NAME':18} \t {'AGE'} \t {'D-Or-A':8} \t {'BAND':23} \t {'GUITAR':30} \t {'PRICE':9}")
             print("-------------------------------------------------------------------------------------------------------------------------------------")
             print(f"{name[found]:15} \t {age[found]} \t {dOrA[found]:8} \t {band[found]:23} \t {guitar[found]:30} \t ${price[found]:9.2f}")
             print("-------------------------------------------------------------------------------------------------------------------------------------\n")
 
         else:
-            print(f"Could not find {search} in the list, either you misspelled the name or they are not in the list.")
-
+            print(f"Could not find {search} in the list, either you misspelled the name or they are not in the list yet.")
+        
+        input("\n\t \t \t \tPress ENTER to continue...")
+        os.system('cls')
+        sleep(0.1)
         menu_choice = menu()
 
     if menu_choice == "8": #Search by Band
         search = input("\nEnter the BAND of the guitarist(s) you are searching for: ")
-
+        os.system('cls')
+        sleep(0.1)
         found = b_search(search)
 
         if found != "":
+            print()
+            print()
             print(f"{'NAME':18} \t {'AGE'} \t {'D-Or-A':8} \t {'BAND':23} \t {'GUITAR':30} \t {'PRICE':9}")
             print("-------------------------------------------------------------------------------------------------------------------------------------")
             for i in found:
@@ -305,13 +361,17 @@ while menu_choice != "9":
             print("-------------------------------------------------------------------------------------------------------------------------------------\n")
 
         else:
-            print(f"Could not find {search} in the list, either you misspelled the name or they are not in the list.")
+            print(f"Could not find {search} in the list, either you misspelled the name or that band is not in the list yet.")
 
+        input("\n\t \t \t \tPress ENTER to continue...")
+        os.system('cls')
+        sleep(0.1)
         menu_choice = menu()
 
-    
-print("Thank you for using this program. Have a nice day and Rock on!")
 
+os.system('cls')
+sleep(0.1)
+print("\n\n\t\tThank you for using this program. Have a nice day and Rock on!\n\n")
 
 
 
