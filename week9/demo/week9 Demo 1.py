@@ -172,7 +172,7 @@ for i in range(0, len(age) - 1):
 total_age = 0
 for i in range(0, num_rec):
 
-    #print(f"{idCode[i]:10}\t{lastname[i]:15}\t{firstName[i]:15}\t{age[i]:3}\t{allegiance[i]:35}\t{num[i]:3}\t{color1[i]:7}\t{color2[i]:7}")
+    print(f"{idCode[i]:10}\t{lastname[i]:15}\t{firstName[i]:15}\t{age[i]:3}\t{allegiance[i]:35}\t{num[i]:3}\t{color1[i]:7}\t{color2[i]:7}")
     total_age += age[i]
 
 

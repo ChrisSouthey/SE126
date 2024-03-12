@@ -1,0 +1,53 @@
+Slash,58,Alive,Guns N Roses,1959 Les Paul Standard,3199
+Eddie Van Halen,65,Dead,Van Halen,Frankenstrat,1999
+Angus Young,68,Alive,ACDC,1971 Gibson SG Standard,3195
+Jimi Hendrix,27,Dead,1964 Fender Stratocaster,4200
+Kurt Cobain,27,Dead,Nirvana,1969 Fender Mustang,1200
+Dave Grohl,55,Alive,Foo Fighters,Gibson DG-335,3999
+Brian May,76,Alive,Queen,Red Special,5999
+Eric Clapton,78,Alive,Fender Stratocaster,2099
+Prince,57,Dead,Fender Telecaster,1799
+Kirk Hammett,61,Alive,Metallica,ESP KH-2,4279
+James Hetfield,60,Alive,Metallica,Gibson Explorer,2499
+Tom Morello,59,Alive,Rage Against the Machine,Mongrel Stratocaster,1699
+Synyster Gates,45,Alive,Avenged Sevenfold,Schecter Synyster Gates Custom,1399
+Carlos Santana,76,Alive,Santana,PRS Custom 24,4890
+Pete Townshend,78,Alive,The Who,Fender Stratocaster,6500
+Stevie Ray Vaughan,35,Dead,Fender Stratocaster,10900
+Chuck Berry,90,Dead,Gibson ES-350T,10999
+George Harrison,58,Dead,The Beatles,Fender Stratocaster,3936
+Jack White,48,Alive,The White Stripes,1964 Valco Airline,2150
+Brian Bell,55,Alive,Weezer,1996 Fender Stratocaster,799
+Dimebag Darrell,38,Dead,Pantera,Dean ML,1499
+Bruce Springsteen,74,Alive,E Street Band,Fender Esquire,4899
+Zakk Wylde,57,Alive,Gibson Les Paul,1119
+Steve Vai,63,Alive,Whitesnake,Ibanez JEM,1799
+Tommy Thayer,63,Alive,KISS,Epiphone Les Paul,714
+Ace Frehley,72,Alive,KISS,1976 Les Paul,3299
+Buckethead,54,Alive,Gibson Les Paul,6550
+Joe Satriani,67,Alive,Ibanez JS100,1699
+Randy Rhoads,25,Dead,Quiet Riot,1974 Gibson Les Paul,799
+Dave Mustaine,62,Alive,Megadeth,Gibson Flying V,2799
+Jimmy Page,80,Alive,Led Zepplin,Gibson Leb Paul,2499
+Jake E. Lee,67,Alive,Fender Stratocaster,1299
+Andy Summers,81,Alive,The Police,1963 Fender Telecaster,2199
+Phil Collen,66,Alive,Def Leopard,1978 Fender Stratocaster,3499
+John Sykes,64,Alive,Whitesnake,1978 Gibson Les Paul Custom,2199
+Adrian Vanderberg,70,Alive,Whitesnake,Gibson Les Paul Heritage,2599
+Dave Murray,67,Alive,Iron Maiden,1957 Fender Stratocaster,1699
+Chrissie Hynde,72,Alive,The Pretenders,Fender Telecaster,799
+George Lynch,69,Alive,Dokken,ESP LTD Tiger Stripe,1699
+CC DeVille,61,Alive,Poison,B.C. Rich Gunslinger,4199
+Mick Mars,72,Alive,Motley Crue,1962 Fender Stratocaster,4950
+Neal Schon,70,Alive,Journey,Fender Custom Shop Stratocaster,5950
+Carlos Cavazo,66,Alive,Quiet Riot,Gibson Flying V,2499
+Brad Whitford,72,Alive,Aerosmith,1965 Fender Stratocaster,1699
+Herman Li,47,Alive,DragonForce,Ibanez EGEN8,775
+Izzy Stradlin,61,Alive,Guns N Roses,Gibson ES-175,3495
+Paul Stanley,72,Alive,KISS,Ibanez PS120,999
+Marty Friedman,61,Alive,Megadeth,Jackson MF-1,1349
+Scott Ian,60,Alive,Anthrax,Jackson Flying V,799
+Kerry King,59,Alive,Slayer,Dean FLying V,1499
+Vernon Reid,65,Alive,Living Colour,Gibson ES-330,3499
+Mike McCready,57,Alive,Pearl Jam,Fender Stratocaster,1899
+Stone Gossard,57,Alive,Pearl Jam,Gibson Les Paul Custom,15000
